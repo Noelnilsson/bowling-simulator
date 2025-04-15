@@ -1,0 +1,46 @@
+.home-page  {
+    margin-bottom: 2rem; 
+    text-align: center; 
+  }
+  
+.home-page-intro h1{
+    font-size: 2.5rem; 
+    margin-bottom: 1rem;
+  }
+  
+.home-page-intro p {
+    font-size: 1.2rem;
+    color: #555; 
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+.simulation-section{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.simulation-section button{
+    background-color: #59adf1;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 22px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+.simulation-section button:hover{
+    background-color: #007bff; 
+    cursor: pointer;
+}
+
+.simulation-section img{
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}

@@ -1,0 +1,141 @@
+/* src/pages/AboutPage.css */
+
+.about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.about-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.about-section {
+  margin-bottom: 3rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.about-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #3498db;
+}
+
+.about-section p {
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.tech-card {
+  flex: 1;
+  min-width: 250px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.2rem;
+  border-left: 4px solid #3498db;
+}
+
+.tech-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.tech-card ul {
+  padding-left: 1.5rem;
+}
+
+.tech-card li {
+  margin-bottom: 0.5rem;
+}
+
+.structure-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.structure-column {
+  flex: 1;
+  min-width: 250px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+
+.structure-column ul {
+  padding-left: 1.5rem;
+}
+
+.structure-column li {
+  margin-bottom: 0.8rem;
+}
+
+.api-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.api-table th, 
+.api-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.api-table th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+}
+
+.api-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.api-table tr:hover {
+  background-color: #f0f0f0;
+}
+
+
+@media (max-width: 768px) {
+  .tech-stack,
+  .structure-container {
+    flex-direction: column;
+  }
+  
+  .tech-card,
+  .structure-column {
+    min-width: auto;
+  }
+  
+  .about-page {
+    padding: 1rem;
+  }
+}
+  
