@@ -1,9 +1,20 @@
-Bowling simulator 
+# 🎳 Bowling Simulator
 
-To run frontend:
-`cd frontend
-npm start`
+A simple bowling simulator with a frontend and backend.
 
-To run backend
-`cd backend 
-npm start^`
+---
+
+## 🚀 Getting Started
+
+### 🖥️ Run Frontend
+
+```bash
+cd frontend
+npm start
+```
+
+### 🔧 Run Backend
+```bash
+cd backend
+npm start
+```
