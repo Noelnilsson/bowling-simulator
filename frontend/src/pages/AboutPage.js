@@ -11,7 +11,7 @@ function AboutPage() {
         <p>
           This bowling simulator allows users to simulate bowling games and calculate scores.
           <br />
-          <strong>Github: </strong>
+          <strong>Github: </strong> <a href="https://github.com/Noelnilsson/bowling-simulator">https://github.com/Noelnilsson/bowling-simulator</a>
         </p>
       </section>
 
