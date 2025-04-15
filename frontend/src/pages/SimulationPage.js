@@ -77,34 +77,49 @@ function SimulationPage() {
   };
 
   const formatRoll = (round, rollNum) => {
+    const roundIndex = rounds.findIndex(r => r === round);
+    const isTenthRound = roundIndex === 9;
+
     if (rollNum === 1) {
       if (round.roll1 === 10) {
         return 'X';
-      } 
+      }
       else if (round.roll1 !== undefined) {
-        return round.roll1 === 0 ? '-' : round.roll1; 
+        return round.roll1 === 0 ? '-' : round.roll1;
       }
       return '';
-    } 
+    }
+
     else if (rollNum === 2) {
-      if (round.roll1 === 10 && round.roll2 === 10) {
-        return 'X';
-      } 
-      else if (round.roll1 !== undefined && round.roll2 !== undefined && round.roll1 + round.roll2 === 10) {
+      if (isTenthRound && round.roll1 === 10) {
+          if (round.roll2 === 10) {
+              return 'X';
+          } else if (round.roll2 !== undefined) {
+              return round.roll2 === 0 ? '-' : round.roll2;
+          }
+      }
+      else if (round.roll1 !== undefined && round.roll1 < 10 && round.roll2 !== undefined && round.roll1 + round.roll2 === 10) {
         return '/';
-      } 
+      }
       else if (round.roll2 !== undefined) {
         return round.roll2 === 0 ? '-' : round.roll2;
       }
       return '';
-    } 
+    }
     else if (rollNum === 3) {
+      if (!isTenthRound) return '';
+
       if (round.roll3 === 10) {
         return 'X';
-      } 
-      else if (round.roll2 === 10 && round.roll3 !== undefined && round.roll3 + round.roll2 === 10) {
+      }
+      else if (round.roll1 === 10 && round.roll2 !== undefined && round.roll2 < 10 && round.roll3 !== undefined && round.roll2 + round.roll3 === 10) {
         return '/';
-      } 
+      }
+       else if (round.roll1 !== undefined && round.roll1 < 10 && round.roll2 !== undefined && round.roll1 + round.roll2 === 10) {
+           if(round.roll3 !== undefined){
+                return round.roll3 === 0 ? '-' : round.roll3; 
+           }
+       }
       else if (round.roll3 !== undefined) {
         return round.roll3 === 0 ? '-' : round.roll3;
       }
@@ -112,6 +127,7 @@ function SimulationPage() {
     }
     return '';
   };
+
 
   console.log('Rounds:', rounds);
 
